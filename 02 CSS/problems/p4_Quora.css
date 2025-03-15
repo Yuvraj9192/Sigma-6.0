@@ -1,0 +1,81 @@
+/*  Selectors   */
+
+/*  Universal selector :- to select everything in a document    */
+
+*{
+    /*  property: value */
+    font-family: 'Courier New';
+}
+
+h1, h3{
+    color: #F52936;
+}
+/*  id selector : this is used to make select an id */
+#login {
+    background-color: white;
+}
+
+#signup{
+    background-color: #F52936;
+    color: white;
+}
+
+
+/* class Selector : selects an element based on their class attribute */
+
+.upvote{
+    background-color:green ;
+    color: aliceblue;
+}
+
+/*  descentent selector*/
+
+nav a{
+    color: purple;
+    background-color: rgba(255, 255, 0, 0.392);
+    line-height: 1.5rem;
+}
+
+nav ul li a{
+    color: hotpink;
+}
+
+p + h3 {
+    text-decoration: underline;
+}
+
+.upvote + button {
+    background-color: cornflowerblue;
+    color: darkblue;
+}
+
+/* this is an example of  next sibling combinator */
+/* The next-sibling combinator (+) separates two selectors and matches the second element only if it immediately follows the first element, and both are children of the same parent element. */
+
+p + h3 {
+    color: rgb(150, 22, 22);
+}
+
+/* child descendant :  the very first relation*/
+
+/* span > .upvote {
+    background-color: maroon;
+} */
+
+/* Attribut Selector selects based on the presence or value of a given attribute */
+
+input[type="text"] {
+    color: black;
+}
+
+input[type="password"] {
+    color: green;
+}
+
+/* input[type] {
+    background-color: ghostwhite;
+} */
+
+/* div[id="myId"]{
+    color: orange;
+} */

@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text editor</title>
+</head>
+<body>
+    <h1>My text editor</h1>
+    <p>your text will appear here </p>
+    <input type="text" placeholder="write here ..." id="input"/>
+    <script>
+        let input = document.querySelector('#input');
+        let p = document.querySelector('p');
+        input.addEventListener('input', function() {
+            console.log(this.value);
+            p.innerText = this.value;
+        })
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Input</title>
+</head>
+
+<body>
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <h2 id="displayName"></h2>
+
+    <script>
+        document.getElementById('nameInput').addEventListener('input', function () {
+            let input = this.value;
+            let filteredInput = input.replace(/[^a-zA-Z\s]/g, ''); // Allow only letters and spaces
+            this.value = filteredInput;
+            document.getElementById('displayName').textContent = filteredInput;
+        });
+    </script>
+
+</body>
+
+</html>

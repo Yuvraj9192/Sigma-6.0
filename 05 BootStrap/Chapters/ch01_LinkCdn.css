@@ -1,0 +1,26 @@
+/* .btn-danger{
+    background-color: rgb(70, 75, 124);
+    color: rgb(224, 208, 208);
+    border: none;
+    box-shadow: 4px 4px 8px rgba(21, 25, 56, 0.671);
+    position: relative;
+    transition: all 1s ease-in 0.3s;
+    top: 5px;
+}
+
+.btn-danger:hover{
+    background-color: rgb(59, 59, 74);
+    box-shadow: 6px 6px 8px rgb(14, 14, 44);
+}
+
+.btn-danger:active{
+    transform: scale(2);
+    box-shadow: 4px 4px 8px red;
+    opacity: 0;
+} */
+
+.container{
+    background-color: rgb(254, 255, 253);
+}
+
+

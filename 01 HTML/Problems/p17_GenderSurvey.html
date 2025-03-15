@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender survey</title>
+</head>
+<body>
+    <form action="/server">
+        <div>
+            <label for="name">Name:</label>
+            <input id="name" type="text">
+        </div>
+        <br>
+        <div>
+            <label for="gender">
+                <span>Sex:</span>
+            </label>
+
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <br>
+
+        <label for="Region">Country:</label>
+        <select name="" id="">
+            <option value="">select an option</option>
+            <option value="">India</option>
+            <option value="">Nepal</option>
+            <option value="">USA</option>
+            <option value="">Canada</option>
+        </select>
+        <br>
+        <br>
+        <div>
+            <label for="message">
+                Message:
+            </label>
+            <br>
+            <textarea name="message" id="message"></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" id="subscr">
+            <label for="subscr"> Subscribe?</label>
+        </div>
+        <br>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+p{
+    background-color: orange;
+}
+
+span{
+    background-color: limegreen;
+    border: 2px solid black;
+    height: 100px;
+    width: 200px;
+    padding: 5px; /* by default padding/margin : left and right */
+    display: inline-block;
+}
+
+.outer{
+    height: 200px;
+    width: 200px;
+    background-color: pink;
+    margin: 50px;
+}
+
+.inner{
+    height: 100px;
+    width: 100px;
+    background-color: tan;
+    margin-left: 10%;
+}

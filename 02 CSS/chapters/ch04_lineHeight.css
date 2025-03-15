@@ -1,0 +1,16 @@
+p{
+    line-height: 2rem; /*this give space between two lines*/
+    letter-spacing: 5px; /*this give space between alphabets*/
+    font-size: 1rem;
+    /*  types of values
+        absolute    Relative
+        px          %
+        pt          em
+        pc          rem
+        cm          ch
+        mm          vh
+        in          vw + many more
+
+        note:- cssFontStack.com to know font style
+    */
+}

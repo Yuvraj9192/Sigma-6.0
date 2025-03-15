@@ -1,0 +1,33 @@
+h1{
+    background-color: yellow;
+    border: 2px solid black;
+}
+
+@media screen and (max-width: 400px) {
+    h1{
+        background-color: red;
+        color:azure;
+        border-radius: 5px;
+    }
+    div{
+        height: 100px;
+        width: 100px;
+        border: 2px solid navajowhite;
+        background-color: orange;
+    }
+}
+
+@media screen and (min-width: 600px){
+    h1{
+        background-color: limegreen;
+        color: rgb(255, 255, 255);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+
+@media (orientation: landscape) {
+    h1{
+        background-color: aqua;
+        color: brown;
+    }
+}

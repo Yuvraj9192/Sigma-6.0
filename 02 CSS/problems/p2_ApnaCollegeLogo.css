@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Protest+Revolution&display=swap');
+
+h1{
+    font-family: "protected Revolution";
+    color: #ffa511;
+    text-align: center;
+    text-decoration: teal double underline;
+    /* text-decoration-style: double ;
+    text-decoration-color: rgb(121, 183, 212); */
+    font-weight: 900;
+    font-size: 55px;
+    line-height: 36px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

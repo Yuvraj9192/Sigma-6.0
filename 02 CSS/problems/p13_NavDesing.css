@@ -1,0 +1,19 @@
+.container{
+    background-color: pink;
+    border: 2px solid green;
+    height: 50px; width: 900px;
+    border-radius: 5px;
+}
+
+.optionpart{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.option{
+    font-size: 24px;
+    font-weight: bold;
+}

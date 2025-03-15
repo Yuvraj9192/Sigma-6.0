@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        .orange{
+            background-color: orange;
+            color: white;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 2px;
+        }
+        .diplay{
+            display: block;
+        }
+        .blue{
+            color: white;
+            background-color: blue;
+            color: white;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 2px;
+        }
+        .underLine{
+            text-decoration: underline;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        let input = document.createElement('input');
+        input.setAttribute('placeholder', 'username');
+        document.querySelector('body').append(input);
+        // input.classList('display');
+        
+        let btn = document.createElement('button');
+        btn.id = 'btn';
+        btn.innerText = "submit";
+        btn.classList.add('orange');
+        document.querySelector('body').append(btn);
+        btn.classList.add('blue');
+        
+        let heading = document.createElement('h1');
+        heading.innerText = "DOM PRACTISE";
+        heading.classList.add('underLine');
+        document.querySelector('body').append(heading);
+
+        let para = document.createElement('p');
+        para.innerHTML = "<p>Apna College <b>Delta</b> Practice</p>";
+        document.querySelector('body').append(para);
+    </script>
+</body>
+</html>

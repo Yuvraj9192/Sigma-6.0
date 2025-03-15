@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Number Guessing Game</h1>
+        <input type="number" id="range" placeholder="Enter range">
+        <button id="startButton">Start Game</button>
+        <br>
+        <input type="number" id="guess" placeholder="Make a try" disabled>
+        <button id="guessButton" disabled>Guess</button>
+        <p id="message"></p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const rangeInput = document.getElementById("range");
+            const guessInput = document.getElementById("guess");
+            const message = document.getElementById("message");
+            const startButton = document.getElementById("startButton");
+            const guessButton = document.getElementById("guessButton");
+
+            let range, rand;
+
+            startButton.addEventListener("click", () => {
+                range = parseInt(rangeInput.value);
+                if (!isNaN(range) && range > 0) {
+                    rand = Math.floor(Math.random() * range) + 1;
+                    rangeInput.disabled = true;
+                    startButton.disabled = true;
+                    guessInput.disabled = false;
+                    guessButton.disabled = false;
+                } else {
+                    alert("Please enter a valid number for the range.");
+                }
+            });
+
+            guessButton.addEventListener("click", () => {
+                let guess = parseInt(guessInput.value);
+                if (!isNaN(guess)) {
+                    if (guess === rand) {
+                        message.textContent = "You won!!";
+                        resetGame();
+                    } else if (guess > rand) {
+                        message.textContent = "Try a smaller number.";
+                    } else {
+                        message.textContent = "Try a higher number.";
+                    }
+                } else {
+                    alert("Please enter a valid number for the guess.");
+                }
+            });
+
+            function resetGame() {
+                rangeInput.disabled = false;
+                rangeInput.value = "";
+                startButton.disabled = false;
+                guessInput.disabled = true;
+                guessInput.value = "";
+                guessButton.disabled = true;
+            }
+        });
+    </script>
+</body>
+
+</html>

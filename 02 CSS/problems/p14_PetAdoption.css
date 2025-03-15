@@ -1,0 +1,73 @@
+
+
+h2 i {
+    color: orange;
+    text-transform: lowercase;
+}
+
+h1 span {
+    color: rgb(108, 77, 18);
+}
+
+#pets{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 5rem;
+    padding: 50px;
+    place-items: center;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 100%;
+    border: 2px solid black;
+}
+
+.card img{
+    width: 80%;
+    height: 100px;
+    position: relative;
+    top: 10px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.card h3{
+    width: 83%;
+    margin-left: 5px;
+}
+
+.card p{
+    max-width: 83%;
+}
+
+h4{
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1176px) {
+    .body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #pets {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .card img{
+        height: 50px;
+        width: 200px;
+        border-radius: 100%;
+    }
+}

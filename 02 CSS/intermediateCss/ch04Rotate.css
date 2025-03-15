@@ -1,0 +1,53 @@
+section{
+    margin-top: 200px;
+}
+
+div{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #7aa874;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+div:nth-of-type(2n){
+    background-color: rgba(180, 141, 69, 0.71);
+}
+
+div:nth-of-type(3n){
+    background-color: rgba(186, 134, 39, 0.71);
+}
+
+/* Rotations :- use to make an particular rotation in your div */
+#one {
+    transition: all 1s ease-in-out 0.8s;
+    transform: rotate(45deg);
+}
+
+/* Scale :- this is used to how much bigger we wann create our div and this is on the basic of their current default multiple size... */
+
+#two{
+    transition: all 1s step-end 0.4s;
+    transform: scale(1.1 , 0.5);
+}
+
+/* translate :- this will give our div an movement which is only on the basic of 2d plan not on 3d... */
+
+#three{
+    transition: all 1s ease-in 0.5s;
+    transform: translate(100px ,100px);
+}
+
+
+/* skew :- this means you strech the div */
+
+#four{
+    transition: all 1s ease-in 0.5s;
+    transform: skew(40deg);
+}
+
+#five{
+    transition: all 1s ease-in 0.8s;
+    transform: rotate(30deg) translateX(150px);
+}
