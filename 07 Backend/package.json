@@ -1,0 +1,13 @@
+{
+  "name": "07-backend",
+  "version": "1.0.0",
+  "main": "accessingExpFolder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yuvraj",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+
+}
