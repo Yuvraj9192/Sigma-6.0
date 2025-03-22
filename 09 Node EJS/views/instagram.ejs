@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
+<%-include("includes/header.ejs") %>
 
 <body>
     <h2>This page belongs to @<%= data.name%></h2>
@@ -31,7 +24,7 @@
                 // code for loop
             </ul> -->
             
-            
+            <%- include("includes/footer.ejs") %>
         </body>
         <script src="/app.js"></script>
 </html>
