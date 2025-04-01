@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const port = 8080;
 const path = require("path");
+const { v4: uuidv4 } = require('uuid');
+
 
 app.use(express.urlencoded({extended: true}));
 
@@ -10,30 +12,52 @@ app.set("views", path.join(__dirname, "views"));
 
 let posts = [
     {
+        id: uuidv4(),
         username : "apnacollege",
         content : "i love coding!"
     },
     {
+        id: uuidv4(),
         username: "yuvraj sharma",
         content: "eat code repeat"
     },
     {
+        id: uuidv4(),
         username: "vivek yadav",
         content: "hard and keep it up"
     }
 ];
+app.use(express.static(path.join(__dirname, "Public")));
 
 app.get("/posts", (req, res) => {
     // res.send("server working well!!");
     res.render("index.ejs", {posts});
 });
 
-app.use(express.static(path.join(__dirname, "Public")));
+app.post("/post", (req,res) => {
+    // console.log(req.body);
+    let {username, content} = req.body;
+    posts.push({username, content});
+    // res.send("post request working! yeah");
+    res.redirect("/posts");
+});
+
+app.get("/posts/new", (req,res) =>{
+    res.render("new.ejs");
+})
+
+app.get("/posts/:id", (req, res) => {
+    let {id} = req.params;
+    let post = posts.find((p) => id === p.id);
+    console.log(post);
+    // res.send("request is working!!");
+    res.render("show.ejs", {post});
+});
+
+// app.get("/post/new", (req, res) => {
+//     res.render();
+// });
 
 app.listen(port, ()=> {
     console.log(`listening to port : ${port}`);
 });
-
-app.get("/post/new", (req, res) => {
-    res.render();
-})
