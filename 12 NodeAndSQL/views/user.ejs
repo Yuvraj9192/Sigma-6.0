@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user details</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            height: 250px;
+            width: fit-content;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+        <div class="content">
+            <table border="2px">
+                <tr>
+                    <th>User ID</th>
+                    <th>User Name</th>
+                    <th>User Email</th>
+                    <th>Profile</th>
+                    <th>Delete</th>
+                </tr>
+                <% for (let user of users) { %>
+                    <tr>
+                        <td>
+                            <%= user.id %>
+                        </td>
+                        <td>
+                            <%= user.username %>
+                        </td>
+                        <td>
+                            <%= user.email %>
+                        </td>
+                        <td>
+                            <form method="GET" action="/user/<%=user.id%>/edit">
+                                <button>EDIT</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form method="POST" action="/user/<%= user.id %>/destroy?_method=DELETE">
+                                <button>DELETE</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+        </div>
+
+</body>
+
+</html>
