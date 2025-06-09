@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Chat = require("./models/chat.js");
-const newChat = require("newChat");
+// const newChat = require("newchat");
 
 main().then(() => {
     console.log("connected with database");
@@ -9,7 +9,8 @@ main().then(() => {
 });
 
 async function main() {
-    await mongoose.connect("mongodb://127.0.0.1:27017/whatsapp")
+    // await mongoose.connect("mongodb://127.0.0.1:27017/whatsapp");
+    await mongoose.connect("mongodb://127.0.0.1:27017/fakewhatsapp");
 }
 
 
@@ -41,3 +42,4 @@ let allChats = [
 ];
 
 Chat.insertMany(allChats);
+console.log(allChats);
